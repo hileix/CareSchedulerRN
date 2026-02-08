@@ -10,14 +10,19 @@ export type RootStackParamList = {
   DoctorDetail: { doctorId: string };
 };
 
+export type MainTabParamList = {
+  DoctorList: undefined;
+  AppointmentsTab: undefined;
+};
+
 const RootStack = createNativeStackNavigator<RootStackParamList>();
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<MainTabParamList>();
 
 const MainTabs = () => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: true }}>
       <Tab.Screen
-        name="DoctorsTab"
+        name="DoctorList"
         component={DoctorListScreen}
         options={{
           title: 'Doctors',
