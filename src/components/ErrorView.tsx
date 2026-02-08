@@ -4,14 +4,15 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 interface ErrorViewProps {
   message: string;
   onRetry?: () => void;
+  testID?: string;
 }
 
-export default function ErrorView({message, onRetry}: ErrorViewProps) {
+export default function ErrorView({message, onRetry, testID}: ErrorViewProps) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.message}>{message}</Text>
+    <View style={styles.container} testID={testID || 'error-view'}>
+      <Text style={styles.message} testID="error-message">{message}</Text>
       {onRetry && (
-        <TouchableOpacity style={styles.button} onPress={onRetry}>
+        <TouchableOpacity style={styles.button} onPress={onRetry} testID="retry-button">
           <Text style={styles.buttonText}>Retry</Text>
         </TouchableOpacity>
       )}

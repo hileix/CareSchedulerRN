@@ -57,44 +57,47 @@ const BookingConfirmModal = ({
       visible={visible}
       transparent
       animationType="fade"
-      onRequestClose={onClose}>
+      onRequestClose={onClose}
+      testID="booking-modal">
       <View style={styles.overlay}>
         <View style={styles.modalContainer}>
           <View style={styles.header}>
-            <Text style={styles.title}>Confirm Booking</Text>
-            <TouchableOpacity onPress={onClose} style={styles.closeButton}>
+            <Text style={styles.title} testID="modal-title">Confirm Booking</Text>
+            <TouchableOpacity onPress={onClose} style={styles.closeButton} testID="close-button">
               <Text style={styles.closeText}>✕</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.card}>
             <Text style={styles.label}>Doctor</Text>
-            <Text style={styles.value}>{slot.doctorName}</Text>
+            <Text style={styles.value} testID="doctor-name">{slot.doctorName}</Text>
 
             <Text style={styles.label}>Day</Text>
-            <Text style={styles.value}>{slot.dayOfWeek}</Text>
+            <Text style={styles.value} testID="day-of-week">{slot.dayOfWeek}</Text>
 
             <Text style={styles.label}>Time</Text>
-            <Text style={styles.value}>
+            <Text style={styles.value} testID="time-slot">
               {slot.startTime} - {slot.endTime}
             </Text>
 
             <Text style={styles.label}>Timezone</Text>
-            <Text style={styles.value}>{slot.timezone}</Text>
+            <Text style={styles.value} testID="timezone">{slot.timezone}</Text>
           </View>
 
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={[styles.button, styles.cancelButton]}
               onPress={onClose}
-              disabled={submitting}>
+              disabled={submitting}
+              testID="cancel-button">
               <Text style={styles.cancelButtonText}>Cancel</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={[styles.button, styles.confirmButton, submitting && styles.buttonDisabled]}
               onPress={handleConfirm}
-              disabled={submitting}>
+              disabled={submitting}
+              testID="confirm-button">
               <Text style={styles.confirmButtonText}>
                 {submitting ? 'Booking...' : 'Confirm'}
               </Text>

@@ -19,11 +19,12 @@ const TimeSlotItem = ({
       style={[styles.slot, isBooked && styles.slotBooked]}
       onPress={onPress}
       disabled={isBooked}
+      testID="time-slot-item"
     >
-      <Text style={[styles.time, isBooked && styles.timeBooked]}>
+      <Text style={[styles.time, isBooked && styles.timeBooked]} testID="time-slot-text">
         {startTime} - {endTime}
       </Text>
-      {isBooked && <Text style={styles.bookedLabel}>Booked</Text>}
+      {isBooked && <Text style={styles.bookedLabel} testID="booked-label">Booked</Text>}
     </TouchableOpacity>
   );
 };

@@ -40,7 +40,7 @@ const DoctorListScreen = ({ navigation }: Props) => {
   }
 
   if (!doctors || doctors.length === 0) {
-    return <ErrorView message="No doctors available." />;
+    return <ErrorView message="No doctors available." testID="empty-state" />;
   }
 
   const renderItem = ({ item }: { item: Doctor }) => (
@@ -51,7 +51,7 @@ const DoctorListScreen = ({ navigation }: Props) => {
   );
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="doctor-list-container">
       <FlatList
         data={doctors}
         keyExtractor={item => item.id}

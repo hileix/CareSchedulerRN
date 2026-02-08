@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorView /> matches snapshot with retry button 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 24,
+    }
+  }
+  testID="error-view"
+>
+  <Text
+    style={
+      {
+        "color": "#666",
+        "fontSize": 16,
+        "marginBottom": 16,
+        "textAlign": "center",
+      }
+    }
+    testID="error-message"
+  >
+    Test error
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "#007AFF",
+        "borderRadius": 8,
+        "opacity": 1,
+        "paddingHorizontal": 24,
+        "paddingVertical": 12,
+      }
+    }
+    testID="retry-button"
+  >
+    <Text
+      style={
+        {
+          "color": "#fff",
+          "fontSize": 16,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Retry
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<ErrorView /> matches snapshot without retry button 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 24,
+    }
+  }
+  testID="error-view"
+>
+  <Text
+    style={
+      {
+        "color": "#666",
+        "fontSize": 16,
+        "marginBottom": 16,
+        "textAlign": "center",
+      }
+    }
+    testID="error-message"
+  >
+    Test error
+  </Text>
+</View>
+`;

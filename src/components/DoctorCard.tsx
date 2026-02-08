@@ -14,12 +14,12 @@ const DoctorCard = ({doctor, onPress}: DoctorCardProps) => {
     .join(', ');
 
   return (
-    <TouchableOpacity style={styles.card} onPress={onPress}>
-      <Text style={styles.name}>{doctor.name}</Text>
-      <Text style={styles.timezone}>{doctor.timezone}</Text>
+    <TouchableOpacity style={styles.card} onPress={onPress} testID="doctor-card">
+      <Text style={styles.name} testID="doctor-name">{doctor.name}</Text>
+      <Text style={styles.timezone} testID="doctor-timezone">{doctor.timezone}</Text>
       <View style={styles.daysRow}>
         <Text style={styles.daysLabel}>Available: </Text>
-        <Text style={styles.daysText}>{daysText}</Text>
+        <Text style={styles.daysText} testID="available-days">{daysText}</Text>
       </View>
     </TouchableOpacity>
   );

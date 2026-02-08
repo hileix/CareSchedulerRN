@@ -70,18 +70,18 @@ const DoctorDetailScreen = ({route}: Props) => {
   );
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.name}>{doctor.name}</Text>
-        <Text style={styles.timezone}>{doctor.timezone}</Text>
+    <View style={styles.container} testID="doctor-detail-container">
+      <View style={styles.header} testID="doctor-header">
+        <Text style={styles.name} testID="doctor-name">{doctor.name}</Text>
+        <Text style={styles.timezone} testID="doctor-timezone">{doctor.timezone}</Text>
       </View>
       <SectionList
         sections={sections}
         keyExtractor={item => item.id}
         renderItem={renderSlot}
         renderSectionHeader={({section}) => (
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>{section.title}</Text>
+          <View style={styles.sectionHeader} testID={`section-${section.title}`}>
+            <Text style={styles.sectionTitle} testID={`section-title-${section.title}`}>{section.title}</Text>
             <Text style={styles.sectionSubtitle}>{section.subtitle}</Text>
           </View>
         )}

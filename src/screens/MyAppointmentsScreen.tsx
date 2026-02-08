@@ -29,14 +29,14 @@ const MyAppointmentsScreen = () => {
 
   if (appointments.length === 0) {
     return (
-      <View style={styles.empty}>
+      <View style={styles.empty} testID="empty-state">
         <Text style={styles.emptyText}>No appointments yet.</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="appointments-container">
       <FlatList
         data={appointments}
         keyExtractor={item => item.id}

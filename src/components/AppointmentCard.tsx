@@ -30,15 +30,19 @@ const AppointmentCard = ({
   };
 
   return (
-    <View style={styles.card}>
+    <View style={styles.card} testID="appointment-card">
       <View style={styles.info}>
-        <Text style={styles.doctor}>{doctorName}</Text>
-        <Text style={styles.time}>
+        <Text style={styles.doctor} testID="doctor-name">{doctorName}</Text>
+        <Text style={styles.time} testID="appointment-time">
           {dayOfWeek} {startTime} - {endTime}
         </Text>
-        <Text style={styles.timezone}>{timezone}</Text>
+        <Text style={styles.timezone} testID="timezone">{timezone}</Text>
       </View>
-      <TouchableOpacity style={styles.cancelBtn} onPress={handleCancel}>
+      <TouchableOpacity
+        style={styles.cancelBtn}
+        onPress={handleCancel}
+        testID="cancel-button"
+      >
         <Text style={styles.cancelText}>Cancel</Text>
       </TouchableOpacity>
     </View>

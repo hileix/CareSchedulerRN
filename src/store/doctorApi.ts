@@ -1,10 +1,10 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {API_BASE_URL} from '../constants';
 import type {Doctor} from '../types';
-import { DoctorRaw } from '../types/api';
-import { DAY_ORDER } from '../constants/schedule';
+import {DoctorRaw} from '../types/api';
+import {DAY_ORDER} from '../constants/schedule';
 
-function groupDoctors(raw: DoctorRaw[]): Doctor[] {
+export const groupDoctors = (raw: DoctorRaw[]): Doctor[] => {
   const map = new Map<string, Doctor>();
 
   for (const item of raw) {
