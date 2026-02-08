@@ -29,6 +29,9 @@ importers:
       '@reduxjs/toolkit':
         specifier: ^2.11.2
         version: 2.11.2(react-redux@9.2.0(@types/react@19.2.13)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
+      dayjs:
+        specifier: ^1.11.19
+        version: 1.11.19
       react:
         specifier: 19.2.0
         version: 19.2.0

@@ -1,3 +1,5 @@
+export const SLOT_DURATION_MINUTES = 30;
+
 export const DAY_ORDER: Record<string, number> = {
   Monday: 0,
   Tuesday: 1,
