@@ -1,6 +1,5 @@
 import {parseTime, generateTimeSlots} from './timeSlots';
 import type {WeeklySchedule} from '../types';
-import dayjs from 'dayjs';
 
 describe('parseTime()', () => {
   it('parses AM time correctly', () => {
